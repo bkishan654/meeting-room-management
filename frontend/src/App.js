@@ -3,8 +3,6 @@
 // import axios from 'axios';
 // //const axios = require('axios');
 
-
-
 // const App=()=>{
 //     const [name,setName]=useState('');
 //     const [message, setMessage] = useState('');
@@ -66,7 +64,7 @@
 //         username:name
 //         });
 //         setMessage(response.data);
-        
+
 //     } catch (err) {
 //         if(err.response)
 //         {
@@ -89,14 +87,14 @@
 
 //   return(
 //     <>
-    
+
 //     <div>
 //         <form onSubmit={createUser}>
-        
+
 //         <h4>create user</h4>
 //         <label for="fname">Name:</label><br></br>
 //         <input type="text" id="fname" name="fname" onChange={changeval}></input><br></br>
-        
+
 //         <button type='submit'>submit</button>
 //         </form><br></br><br></br>
 //         <h4>delete user</h4>
@@ -111,7 +109,7 @@
 //         {userdata && userdata.map((user, index) => (
 //             <p key={index}>{user.id }&ensp;{user.username }</p> // Replace 'username' with the actual property name if different
 //         ))}
-//         {message && <p>{message}</p>} 
+//         {message && <p>{message}</p>}
 
 //     </div>
 //     </>
@@ -121,24 +119,24 @@
 
 // export default App
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Users from './Users';
-import MeetingRooms from './MeetingRooms';
-import MeetingRoomBooking from './MeetingRoomBooking';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Users from './Users'
+import MeetingRooms from './MeetingRooms'
+import MeetingRoomBooking from './MeetingRoomBooking'
 
-function App() {
+function App () {
   return (
     <Router>
-      <div className="App">
+      <div className='App'>
         <Routes>
-          <Route path="/" element={<Users />} />
-          <Route path="/meeting-rooms" element={<MeetingRooms />} />
-          <Route path="/book-meeting-room" element={<MeetingRoomBooking />} />
+          <Route path='/' element={<Users />} />
+          <Route path='/meeting-rooms' element={<MeetingRooms />} />
+          <Route path='/book-meeting-room' element={<MeetingRoomBooking />} />
         </Routes>
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
