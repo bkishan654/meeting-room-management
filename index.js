@@ -32,5 +32,5 @@ app.use('/booking', bookingRoutes);
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.lo(`Server listening on port ${port}`);
 });
