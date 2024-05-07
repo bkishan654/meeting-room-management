@@ -1,0 +1,18 @@
+
+name: Hello World Workflow
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted label-1 label-2
+    # This specifies that the job should run on your self-hosted runner with the specified labels
+
+    steps:
+      - uses: actions/checkout@v2
+      # This step checks out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+      - name: Echo Hello World
+        run: echo "Hello World!!"
+      # This step echoes "Hello World!!" in the log
