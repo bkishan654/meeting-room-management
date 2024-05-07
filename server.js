@@ -1,16 +1,16 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 
-let app=express();
+const app = express()
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(cors);
+app.use(cors)
 
-const fetch=require('./fetch/fetch');
-app.use("/fetch",fetch);
+const fetch = require('./fetch/fetch')
+app.use('/fetch', fetch)
 
-app.listen(8000);
-console.log('server listening on port 8000');
+app.listen(8000)
+console.log('server listening on port 8000')
